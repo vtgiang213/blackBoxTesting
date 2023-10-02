@@ -1,0 +1,8 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="mutantTest" type="PIT" factoryName="PIT Runner" singleton="false" REPORT_DIR="$PROJECT_DIR$/target/report" SOURCE_DIRS="$PROJECT_DIR$/src/main/java" TARGET_CLASSES="org.example.*" TARGET_TESTS="" otherParams="--outputFormats XML,HTML">
+    <module name="CalculateWaterUsage" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
