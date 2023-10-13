@@ -4,8 +4,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-
-import java.util.ArrayList;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -81,4 +79,19 @@ class calcWaterBillTest {
     @ParameterizedTest
     @MethodSource("CFGMethod")
     void waterCostTest3(int u, int m, int result) {assertEquals(result, tester.waterCost(u, m));}
+
+    public static Stream<Arguments> DFMethod() {
+        return Stream.of(
+                Arguments.of(-1, 7, -1),
+                Arguments.of(10, 4, 0),
+                Arguments.of(25, 8, 100000),
+                Arguments.of(42, 9, 337500),
+                Arguments.of(13, 7, 0),
+                Arguments.of(24, 4, 180000),
+                Arguments.of(39, 3, 600000));
+    }
+
+    @ParameterizedTest
+    @MethodSource("DFMethod")
+    void waterCostTest4(int u, int m, int result) {assertEquals(result, tester.waterCost(u, m));}
 }
